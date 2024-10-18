@@ -1,4 +1,4 @@
-Decotest Python Package
+# Decotest Python Package
 
 Decotest is a simple and flexible Python testing framework that allows users to create unit tests with various assertions using decorators. This package is designed to streamline the process of writing and organizing tests while offering a clean and readable syntax.
 Features
@@ -9,25 +9,26 @@ Features
     Simple function-based testing
     Supports passing arguments to test functions
 
-Installation
+---
+
+# Installation
 
 To use the Decotest package, download or clone the repository into your project directory:
 
-bash
-
+```bash
 git clone https://github.com/your-username/decotest.git
+```
 
 Then, import the Decotest class into your script:
 
-python
-
+```python
 from decotest import Decotest
+```
 
-Usage
+# Usage
 Basic Example
 
-python
-
+```python
 from decotest import Decotest
 
 # Initialize the Decotest instance
@@ -53,13 +54,14 @@ if __name__ == "__main__":
     number_2(30)        # This will test if the number equals 30
     number_list()       # This will test if 3 is in the list [0, 5, 0]
     DECO_TEST.run_all_tests()
+```
 
-In the above example:
+# In the above example:
 
     The @DECO_TEST.unittest decorator registers the test with a custom name.
-    The @DECO_TEST.assert_eq, @DECO_TEST.assert_in decorators assert that the test function's return value matches a specific condition.
+    The @DECO_TEST.assert_?? decorators assert that the test function's return value matches a specific condition.
 
-Adding Tests
+# Adding Tests
 
 To add a new test:
 
@@ -67,10 +69,11 @@ To add a new test:
     Use the @DECO_TEST.unittest(name="Test name") decorator to give the test a name.
     Apply the appropriate assertion decorator like assert_eq, assert_in, assert_gt, etc.
 
-Running Tests
+# Running Tests
 
 All tests are executed using the DECO_TEST.run_all_tests() method, which will output the result of each test in the console.
-Assertions
+
+# Assertions
 
 Decotest provides several types of assertions, allowing flexible and expressive testing:
 Equality Assertions
@@ -100,23 +103,24 @@ Logical Assertions
     assert_and(expected_value) : Checks if both expected_value and the result are True.
     assert_or(expected_value) : Checks if either expected_value or the result is True.
 
-Test Output
+# Test Output
 
 Each test provides the following output format:
 
-diff
+```diff
 
 +----+----+=====================
 | PASS |    | Test addition
 +----+----+=====================
 | BAD |    | Test exact number
 
+```
 Test exact number: 30, expected value 30
 
     PASS: The test passed.
     BAD: The test failed, with a detailed comparison of expected and actual values.
 
-API Documentation
+# API Documentation
 Decotest
 Methods:
 
@@ -146,7 +150,7 @@ Example
 
 Here is an example of how you can define and run tests with the Decotest framework:
 
-python
+```python
 
 from decotest import Decotest
 
@@ -169,8 +173,9 @@ if __name__ == "__main__":
     greater_test(6)
     equal_test()
     DECO_TEST.run_all_tests()
+```
 
-License
+# License
 
 This project is licensed under the MIT License.
 
