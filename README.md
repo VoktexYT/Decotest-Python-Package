@@ -1,4 +1,4 @@
-# Decotest Python Package
+![](./logo.png)
 
 Decotest is a simple and flexible Python testing framework that allows users to create unit tests with various assertions using decorators. This package is designed to streamline the process of writing and organizing tests while offering a clean and readable syntax.
 Features
